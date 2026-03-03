@@ -2,15 +2,15 @@ const leia = require('readline-sync')
 
 let salarioBruto
 let adicNoturno
-let HE
-let Desconto
+let he
+let desconto
 let salarioLiquido
 
 salarioBruto = leia.questionFloat('Salário Bruto: ')
 adicNoturno = leia.questionFloat('Adicional Noturno: ')
-HE = leia.questionFloat('Horas Extras: ')
-Desconto = leia.questionFloat('Descontos: ')
+he = leia.questionFloat('Horas Extras: ')
+desconto = leia.questionFloat('Descontos: ')
 
-salarioLiquido = salarioBruto + adicNoturno + (HE * 5) - Desconto
+salarioLiquido = salarioBruto + adicNoturno + (he * 5) - desconto
 
 console.log('Salário Líquido:' + salarioLiquido.toFixed(2))
