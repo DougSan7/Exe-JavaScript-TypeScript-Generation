@@ -17,7 +17,7 @@ console.log("|      3        | Deposito            |");
 
 
 cod = leia.questionInt("Operacao: ");
-valor = leia.questionFloat("Valor: R$ ");
+
 
 switch(cod){
   case 1:
@@ -26,6 +26,7 @@ switch(cod){
   break;
   case 2:
     console.log("\nOperação - Saque");
+    valor = leia.questionFloat("Valor: R$ ");
 
     if(valor > saldo){
       console.log("\nSaldo Insuficiente!");
@@ -36,9 +37,10 @@ switch(cod){
   break; 
   case 3:
     console.log("\nOperação - Depósito");
+    valor = leia.questionFloat("Valor: R$ ");
 
     nValor = valor + saldo
-    console.log(nValor.toFixed(2));  
+    console.log(brl.format(nValor.toFixed(2)));  
   break;
   default:
     console.log("\nOperação Inválida!");
